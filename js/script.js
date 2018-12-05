@@ -56,6 +56,10 @@ $(document).ready(function(){
 		div(){
 			return this.a / this.b;
 		},
+		
+		pow(){
+			return Math.pow(this.a,this.b);
+		},
 
 		read(){
 			this.a = +prompt("Input a number for A");
@@ -68,4 +72,5 @@ $(document).ready(function(){
 	alert( calculator.a+" - "+calculator.b+" = "+calculator.sub() );
 	alert( calculator.a+" * "+calculator.b+" = "+calculator.mul() );
 	alert( calculator.a+" / "+calculator.b+" = "+calculator.div() );
+	alert( calculator.a+" raised to the power of "+calculator.b+" = "+calculator.pow() );
 });
