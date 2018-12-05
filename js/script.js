@@ -72,5 +72,5 @@ $(document).ready(function(){
 	alert( calculator.a+" - "+calculator.b+" = "+calculator.sub() );
 	alert( calculator.a+" * "+calculator.b+" = "+calculator.mul() );
 	alert( calculator.a+" / "+calculator.b+" = "+calculator.div() );
-	alert( calculator.a+" raised to the power of "+calculator.b+" = "+calculator.pow() );
+	alert( calculator.a+"^"+calculator.b+" = "+calculator.pow() );
 });
