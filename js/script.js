@@ -40,7 +40,7 @@ $(document).ready(function(){
 	
 	fizzbuzz();
 	
-	let calculator = {
+	/*let calculator = {
 		sum(){
 			return this.a + this.b;
 		},
@@ -68,6 +68,40 @@ $(document).ready(function(){
 	};
 
 	calculator.read();
+	alert( calculator.a+" + "+calculator.b+" = "+calculator.sum() );
+	alert( calculator.a+" - "+calculator.b+" = "+calculator.sub() );
+	alert( calculator.a+" * "+calculator.b+" = "+calculator.mul() );
+	alert( calculator.a+" / "+calculator.b+" = "+calculator.div() );
+	alert( calculator.a+"^"+calculator.b+" = "+calculator.pow() );*/
+	
+	class Calculator{
+		constructor(){
+			this.a = +prompt("Input a number for A.");
+			this.b = +prompt("Input a number for B.");
+		}
+		
+		sum(){
+			return this.a + this.b;
+		}
+		
+		sub(){
+			return this.a - this.b;
+		}
+
+		mul(){
+			return this.a * this.b;
+		}
+		
+		div(){
+			return this.a / this.b;
+		}
+		
+		pow(){
+			return Math.pow(this.a,this.b);
+		}
+	}
+	
+	let calculator = new Calculator();
 	alert( calculator.a+" + "+calculator.b+" = "+calculator.sum() );
 	alert( calculator.a+" - "+calculator.b+" = "+calculator.sub() );
 	alert( calculator.a+" * "+calculator.b+" = "+calculator.mul() );
