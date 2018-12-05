@@ -25,7 +25,7 @@ $(document).ready(function(){
 	});
 	
     function fizzbuzz(){
-		for(var i = 1; i <= 100; i++){
+		for(let i = 1; i <= 100; i++){
 			if(i%3 === 0 && i%5 === 0){
 				console.log("FizzBuzz");
 			}else if(i%3 === 0){
@@ -39,4 +39,33 @@ $(document).ready(function(){
 	}
 	
 	fizzbuzz();
+	
+	let calculator = {
+		sum(){
+			return this.a + this.b;
+		},
+
+		sub(){
+			return this.a - this.b;
+		},
+
+		mul(){
+			return this.a * this.b;
+		},
+		
+		div(){
+			return this.a / this.b;
+		},
+
+		read(){
+			this.a = +prompt("Input a number for A");
+			this.b = +prompt("Input a number for B");
+		}
+	};
+
+	calculator.read();
+	alert( calculator.a+" + "+calculator.b+" = "+calculator.sum() );
+	alert( calculator.a+" - "+calculator.b+" = "+calculator.sub() );
+	alert( calculator.a+" * "+calculator.b+" = "+calculator.mul() );
+	alert( calculator.a+" / "+calculator.b+" = "+calculator.div() );
 });
